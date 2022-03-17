@@ -5,8 +5,7 @@ const { species } = require('../data/zoo_data');
 
 function getAnimalsOlderThan(animal, age) {
   const findingAnimal = species.find((elementoF) => elementoF.name === animal);
-  const result = findingAnimal.residents.every((elemento) => elemento.age >= age);
-  return result;
+  return findingAnimal.residents.every((elemento) => elemento.age >= age);
   // tenho que chegar no residents e dps no age dentro dele
   // verificar a age com a idade minima (>=)
 }
