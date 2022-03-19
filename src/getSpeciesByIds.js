@@ -1,9 +1,11 @@
 const { species } = require('../data/zoo_data');
-
-// Esta função é responsável pela busca das espécies de animais por id. Ela retorna um array contendo as espécies referentes aos ids passados como parâmetro, podendo receber um ou mais ids.
+// destruturação do obj para acessar somente a propriedade especies que tem um array de obejtos como valor
 
 function getSpeciesByIds(...array) {
-  return species.filter((elemento) => array.find((elementFind) => elementFind === elemento.id));
+  // filtrou o array para encontrar o elemento com id identico passado como parametro
+  const idSpecies = species.filter((item) => array.find((itemF) => itemF === item.id));
+  // console.log(idSpecies); retorna objeto referente aquele id passado como parametro
+  return idSpecies;
 }
 
 getSpeciesByIds();

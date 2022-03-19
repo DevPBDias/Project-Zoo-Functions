@@ -4,8 +4,11 @@ function getEmployeeByName(array) {
   const objeto = {};
   if (array === undefined) {
     return objeto;
+    // notação se nao receber nenhum parametro, retonar obj vazio
   }
-  return employees.find((f) => array === f.firstName || array === f.lastName);
+  const findEmployee = employees.find((f) => array === f.firstName || array === f.lastName);
+  // console.log(findEmployee); mostra o obj que contem firstName ou lastName como valor das propriedades
+  return findEmployee;
 }
 
 getEmployeeByName();
