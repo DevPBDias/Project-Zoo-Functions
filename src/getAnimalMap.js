@@ -41,7 +41,7 @@ function getAnimalMap(options) {
   if (!options) location();
   if (!options.includeNames) location();
   if (options.sex) locationResidentsFemale();
-  if (options.sorted) location
+  if (options.sorted) location();
   return location();
 }
 
